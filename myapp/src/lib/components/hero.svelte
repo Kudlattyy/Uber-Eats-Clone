@@ -1,13 +1,13 @@
 <script lang="ts">
 </script>
 
-<body>
+<main>
 	<section class="main-content">
 		
 	</section>
 
 	<slot />
-</body>
+</main>
 
 <style lang="scss">
 	.main-content {

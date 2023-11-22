@@ -1,7 +1,14 @@
-<body>
+<script lang="ts">
+	import {ChangeStoreHamburgerMenu} from '$lib/stores/hamburgerMenu.store'
+	import HamburgerMenu from './hamburgerMenu.svelte';
+</script>
+
+<HamburgerMenu/>
+
+<main>
 	<section class="main-content">
-		<button class="Svg"
-			><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="bt bu bv bw"
+		<button on:click={ChangeStoreHamburgerMenu} class="Svg">
+			<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="bt bu bv bw"
 				><path
 					d="M19.167 3.333H.833v2.5h18.334v-2.5zm0 5.834H.833v2.5h18.334v-2.5zM.833 15h18.334v2.5H.833V15z"
 				></path></svg
@@ -32,8 +39,7 @@
 		<a class="register" href="">Zarejestruj się</a>
 	</section>
 
-	<slot />
-</body>
+</main>
 
 <style lang="scss">
 	a {
@@ -52,8 +58,8 @@
 			height: 20px;
 			background: transparent;
 			border: none;
-            display: flex;
-            align-items: center;
+			display: flex;
+			align-items: center;
 		}
 		.spacer_24 {
 			width: 24px;
@@ -88,13 +94,16 @@
 		.register {
 			width: 116px;
 			height: 36px;
-            border-radius: 500px;
-            display: grid;
-            place-items: center;
-            color: white;
-            background-color: black;
-            font-family: var(--base-font);
-            font-size: 14px;
+			border-radius: 500px;
+			display: grid;
+			place-items: center;
+			color: white;
+			background-color: black;
+			font-family: var(--base-font);
+			font-size: 14px;
 		}
 	}
+
+	
+
 </style>
