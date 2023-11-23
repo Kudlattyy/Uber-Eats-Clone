@@ -47,7 +47,7 @@
 	}
 
 	.main-content {
-		height: 7.5vh;
+		height: 8vh;
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -101,6 +101,7 @@
 			background-color: black;
 			font-family: var(--base-font);
 			font-size: 14px;
+			font-weight: 600;
 		}
 	}
 
