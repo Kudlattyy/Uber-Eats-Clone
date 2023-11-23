@@ -65,6 +65,7 @@
 			height: 100%;
 			position: fixed;
 			display: flex;
+			z-index: 10;
 			.hamburger-menu {
 				width: 70%;
 				height: 100%;
