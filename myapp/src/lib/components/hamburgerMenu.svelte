@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ChangeStoreHamburgerMenu, isHamburgerMenu } from '$lib/stores/hamburgerMenu.store';
+	import { ChangeStoreHamburgerMenu, isHamburgerMenu } from '$lib/stores/Menus.store';
 	import { slide } from 'svelte/transition';
 </script>
 
@@ -60,12 +60,12 @@
 		height: 100vh;
 		position: absolute;
 		background-color: rgba(38, 38, 38, 0.8);
+		position: fixed;
+		z-index: 10;
 		.content-menu {
 			width: 100%;
 			height: 100%;
-			position: fixed;
 			display: flex;
-			z-index: 10;
 			.hamburger-menu {
 				width: 70%;
 				height: 100%;

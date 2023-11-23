@@ -20,3 +20,11 @@ export function ChangeStoreTimeMenu(){
     isTimeMenu.set(true);
     console.log("Czas")
 }
+
+export function ChangeStoreDeliveryMenuToOFalse(){
+    isDeliveryMenu.set(false);
+}
+
+export function ChangeStoreTimeMenuToOFalse(){
+    isTimeMenu.set(false);
+}

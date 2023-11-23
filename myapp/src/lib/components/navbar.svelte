@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {ChangeStoreHamburgerMenu} from '$lib/stores/hamburgerMenu.store'
+	import {ChangeStoreHamburgerMenu} from '$lib/stores/Menus.store'
 	import HamburgerMenu from './hamburgerMenu.svelte';
 </script>
 
@@ -49,6 +49,8 @@
 	.main-content {
 		height: 8vh;
 		width: 100%;
+		position: fixed;
+		z-index: 3;
 		display: flex;
 		align-items: center;
 		background-color: var(--navbarPhone-background-color);

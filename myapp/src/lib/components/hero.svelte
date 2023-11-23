@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { ChangeStoreDeliveryMenu, ChangeStoreTimeMenu } from '$lib/stores/hamburgerMenu.store';
+	import { ChangeStoreDeliveryMenu, ChangeStoreTimeMenu } from '$lib/stores/Menus.store';
 	import DeliveryMenu from './deliveryMenu.svelte';
+	import TimeMenu from './timeMenu.svelte';
 </script>
 
-
-
+<DeliveryMenu />
+<TimeMenu />
 <main>
 	<section class="main-content">
 		<div class="deliveryMenu">
@@ -43,7 +44,7 @@
 						></path></svg
 					> Dostarcz teraz
 				</button>
-				<button class="searchMenu">Wyszukaj restauracje</button>
+				<button class="searchMenu" on:click={ChangeStoreDeliveryMenu}>Wyszukaj restauracje</button>
 			</div>
 		</div>
 	</section>
@@ -56,7 +57,7 @@
 
 	.main-content {
 		width: 100%;
-		height: 92vh;
+		height: 100vh;
 		background-image: var(--background-hero-phone);
 		background-size: cover;
 		.deliveryMenu {
@@ -64,7 +65,7 @@
 			width: 100%;
 			padding: 0 16px;
 			position: fixed;
-			margin-top: 3vh;
+			margin-top: 11vh;
 			@include flex-columns;
 			z-index: 2;
 			h2 {
