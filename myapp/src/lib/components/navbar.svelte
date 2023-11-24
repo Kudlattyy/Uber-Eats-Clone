@@ -34,6 +34,7 @@
 					d="M18.958 7.042a5.958 5.958 0 11-11.916 0 5.958 5.958 0 0111.916 0zM3.25 21.667c0-3.575 2.925-6.5 6.5-6.5h6.5c3.575 0 6.5 2.925 6.5 6.5v3.25H3.25v-3.25z"
 				></path></svg
 			>
+			<div class="login-text"> Zaloguj się </div>
 		</div>
 		<div class="spacer_16" />
 		<a class="register" href="">Zarejestruj się</a>
@@ -54,7 +55,7 @@
 		display: flex;
 		align-items: center;
 		background-color: var(--navbarPhone-background-color);
-		padding: 0 16px;
+		padding: 0 2vw;
 		.Svg {
 			width: 20px;
 			height: 20px;
@@ -88,6 +89,9 @@
 				width: 16px;
 				height: 16px;
 			}
+			.login-text{
+				display: none;
+			}
 		}
 		.spacer_16 {
 			width: 16px;
@@ -107,6 +111,24 @@
 		}
 	}
 
-	
+	@media (min-width: 1024px){
+		.main-content{
+			background-color: transparent;
+			.spacer_66{
+				width: 75vw;
+			}
+		}
+		.login{
+			width: 136px !important;
+			display: flex !important;
+			align-items: center;
+			padding-left: 10px;
+			gap: 10px;
+			.login-text{
+				display: inline !important;
+			}
+		}
+		
+	}
 
 </style>

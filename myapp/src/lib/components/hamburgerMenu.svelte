@@ -116,7 +116,7 @@
 						@include flex-columns;
 						.uberInfo {
 							display: flex;
-							gap: 16px;
+							gap: 5px;
 							.Logo {
 								width: 56px;
 								height: 56px;
@@ -144,7 +144,7 @@
 							border-radius: 500px;
 							font-size: 14px;
 							font-weight: 600;
-							.appleLogo{
+							.appleLogo {
 								width: 22px;
 								height: 22px;
 							}
@@ -157,6 +157,18 @@
 			width: 30%;
 			height: 100%;
 			background-color: transparent;
+		}
+	}
+
+	@media (min-width: 1024px){
+		.hamburger-menu{
+			width: 16% !important;
+			.register{
+				background-color: #000 !important;
+			}
+			.description{
+				color: #1b1b1b !important;
+			}
 		}
 	}
 </style>

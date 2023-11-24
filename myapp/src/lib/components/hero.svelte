@@ -11,7 +11,7 @@
 		<div class="deliveryMenu">
 			<h2>Zamów dostawę w Twojej okolicy</h2>
 			<div class="deliveryPlace">
-				<button on:click={ChangeStoreDeliveryMenu}
+				<button class="deliveryButton" on:click={ChangeStoreDeliveryMenu}
 					><svg
 						aria-hidden="true"
 						focusable="false"
@@ -28,7 +28,7 @@
 						></svg
 					> Wpisz adress dostawy
 				</button>
-				<button on:click={ChangeStoreTimeMenu}>
+				<button class="timeButton" on:click={ChangeStoreTimeMenu}>
 					<svg
 						width="24px"
 						height="24px"
@@ -97,6 +97,43 @@
 					font-size: 18px;
 					color: #fff;
 				}
+			}
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.main-content {
+			background-image: var(--background-hero-pc);
+			background-size: cover;
+			.deliveryMenu {
+				display: flex;
+				justify-content: center;
+				height: 80vh;
+				padding: 0 2vw;
+				.deliveryPlace {
+					flex-direction: row;
+					.deliveryButton {
+						width: 29vw;
+						height: 5.8vh;
+					}
+					.timeButton {
+						width: 11vw;
+						margin-left: 0.5vw;
+					}
+					.searchMenu {
+						width: 11vw;
+						margin-left: 0.5vw;
+						position: relative;
+						top: -1.1vh;
+						transition: 0.2s;
+					}
+					.searchMenu:hover{
+						background-color: #2d2d2d;
+					}
+				}
+			}
+			h2 {
+				font-size: 56px !important;
 			}
 		}
 	}
