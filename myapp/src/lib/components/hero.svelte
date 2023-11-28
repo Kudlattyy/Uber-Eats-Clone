@@ -64,10 +64,9 @@
 			height: 40%;
 			width: 100%;
 			padding: 0 16px;
-			position: fixed;
-			margin-top: 11vh;
+			padding-top	: 11vh;
 			@include flex-columns;
-			z-index: 2;
+			
 			h2 {
 				font-weight: 700;
 				font-size: 36px;

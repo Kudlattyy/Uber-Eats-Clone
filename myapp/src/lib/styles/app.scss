@@ -8,6 +8,12 @@
     font-weight: 500;
     list-style: none;
 }
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 :root{
 
  
