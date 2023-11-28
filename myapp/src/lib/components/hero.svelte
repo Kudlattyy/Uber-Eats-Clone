@@ -66,7 +66,7 @@
 			padding: 0 16px;
 			padding-top	: 11vh;
 			@include flex-columns;
-			
+			  
 			h2 {
 				font-weight: 700;
 				font-size: 36px;
