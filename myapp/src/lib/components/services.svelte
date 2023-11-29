@@ -16,6 +16,53 @@
 			description: 'Zarejestruj się, aby realizować dostawy'
 		}
 	];
+
+	const cityNearby = [
+		'Bydgoszcz',
+		'Częstochowa',
+		'Kraków',
+		'Łódź',
+		'Lublin',
+		'Poznań',
+		'Rzeszów',
+		'Szczecin',
+		'Toruń',
+		'Trójmiasto',
+		'Warszawa',
+		'Wrocław'
+	];
+
+	const operatingCountries = [
+		'Australia',
+		'Belgia',
+		'Chile',
+		'Dominikana',
+		'Ekwador',
+		'Francja',
+		'Gwatemala',
+		'Hiszpania',
+		'Holandia',
+		'Irlandia',
+		'Japonia',
+		'Kanada',
+		'Kenia',
+		'Kostaryka',
+		'Niemcy',
+		'Nowa Zelandia',
+		'Panama',
+		'Polska',
+		'Portugalia',
+		'Republika Południowej Afryki',
+		'Salwador',
+		'Sri Lanka',
+		'Stany Zjednoczone',
+		'Szwajcaria',
+		'Szwecja',
+		'Tajwan (Republika Chińska)',
+		'Wielka Brytania',
+		'Włochy',
+		'Meksyk'
+	];
 </script>
 
 <main>
@@ -70,6 +117,23 @@
 						})();
 					</script><a href="https://1map.com/map-embed">1 Map</a>
 				</div>
+			</div>
+			<div class="cityNearby">
+				<div class="Cities">
+					{#each cityNearby as Index}
+						<p class="fontCityNearby">{Index}</p>
+					{/each}
+				</div>
+				<p>Wyświetl wszystkie miasta ponad 500!</p>
+			</div>
+			<div class="operatingCountries">
+				<h2>Kraje w których działa Uber Eats</h2>
+				<div class="Countries">
+					{#each operatingCountries as Index}
+						<p class="fontOperantingCity">{Index}</p>
+					{/each}
+				</div>
+				<p>Zobacz wszystkie kraje</p>
 			</div>
 		</div>
 	</section>
@@ -127,7 +191,38 @@
 			margin-top: 60px;
 			display: flex;
 			flex-direction: column;
-			gap: 20px
+			gap: 20px;
+			.cityNearby {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				.Cities {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(1, 2fr);
+					gap: 20px 8px;
+					.fontCityNearby {
+						font-weight: 500;
+						text-decoration: none;
+					}
+				}
+			}
+			.operatingCountries {
+				margin-top: 30px;
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				.Countries {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-template-rows: repeat(15, 1fr);
+					gap: 24px 8px;
+					.fontOperantingCity {
+						font-weight: 500;
+						text-decoration: none;
+					}
+				}
+			}
 		}
 	}
 </style>
