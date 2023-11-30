@@ -1,17 +1,17 @@
 <script lang="ts">
 	const oferty = [
 		{
-			src: '/1.webp',
+			src: '/img/1.webp',
 			title: 'Zadbaj o posiłki dla pracowników',
 			description: 'Utwórz konto firmowe'
 		},
 		{
-			src: '/2.webp',
+			src: '/img/2.webp',
 			title: 'Ty zapewniasz menu, a my dostawę',
 			description: 'Dodaj swoją restaurację'
 		},
 		{
-			src: '/3.webp',
+			src: '/img/3.webp',
 			title: 'Realizuj dostawy z Uber Eats',
 			description: 'Zarejestruj się, aby realizować dostawy'
 		}
@@ -69,7 +69,7 @@
 	<section class="main-content">
 		<div class="header">
 			<div class="application">
-				<img class="Logo" src="/UberEatsLogo.svg" />
+				<img class="Logo" src="/svg/UberEatsLogo.svg" />
 				W aplikacji na iPhone'a wybór jest jeszcze większy.
 			</div>
 			<div class="download">
@@ -153,6 +153,7 @@
 
 	.main-content {
 		height: 300vh;
+		width: 100vw;
 		margin: 0px 16px;
 		.header {
 			height: 140px;
