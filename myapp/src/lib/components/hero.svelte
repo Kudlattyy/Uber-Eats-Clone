@@ -8,9 +8,9 @@
 <TimeMenu />
 <main>
 	<section class="main-content">
-		<div class="deliveryMenu">
+		<div class="deliveryMenu flex-columns">
 			<h2>Zamów dostawę w Twojej okolicy</h2>
-			<div class="deliveryPlace">
+			<div class="deliveryPlace flex-columns">
 				<button class="deliveryButton" on:click={ChangeStoreDeliveryMenu}
 					><svg
 						aria-hidden="true"
@@ -53,8 +53,6 @@
 </main>
 
 <style lang="scss">
-	@import '../styles/app.scss';
-
 	.main-content {
 		width: 100%;
 		height: 100vh;
@@ -65,7 +63,6 @@
 			width: 100%;
 			padding: 0 16px;
 			padding-top	: 11vh;
-			@include flex-columns;
 			  
 			h2 {
 				font-weight: 700;
@@ -73,7 +70,6 @@
 				margin-bottom: 24px;
 			}
 			.deliveryPlace {
-				@include flex-columns;
 				button {
 					margin-bottom: 6px;
 					height: 56px;

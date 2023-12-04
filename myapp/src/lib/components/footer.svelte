@@ -24,7 +24,7 @@
 			href: '#',
 			description: 'Umowa dot. usług dostawy'
 		}
-	];
+	] as const;
 
 	const otherLink = [
 		{
@@ -46,11 +46,8 @@
 		{
 			href: '#',
 			description: 'Informacje o Uber Eats'
-		},
-		{
-			href: '#'
 		}
-	];
+	] as const;
 
 	const regulationsLink = [
 		{
@@ -82,12 +79,12 @@
 			href: '#',
 			description: '2023 Uber Technologies Inc'
 		}
-	];
+	] as const;
 </script>
 
 <main>
 	<div class="main-content">
-		<hr class="main-content__divider" />
+		<hr class="main-content__divider first" />
 		<img class="main-content__logo" src="/svg/Logo.svg" />
 		<div class="main-content__store">
 			<img class="main-content__store__image" src="/svg/AppStore.svg" />
@@ -108,7 +105,7 @@
 				</button>
 			</div>
 		</div>
-		<hr class="main-content__divider--second" />
+		<hr class="main-content__divider second" />
 		<div class="main-content__regulation">
 			<div class="main-content__regulation__social">
 				<img
@@ -123,8 +120,7 @@
 			</div>
 			<div class="main-content__regulation__link">
 				{#each regulationsLink as Index}
-					<a class="main-content__regulation__link__item" href={Index.href}>{Index.description}</a
-					>
+					<a class="main-content__regulation__link__item" href={Index.href}>{Index.description}</a>
 				{/each}
 			</div>
 		</div>
@@ -133,95 +129,91 @@
 	<slot />
 </main>
 
-
 <style lang="scss">
 	.main-content__divider {
-	border: solid 0.1px;
-	width: 100vw;
-	color: #e5e5e5;
-}
+		border: solid 0.1px;
+		color: #e5e5e5;
 
-.main-content__divider--second {
-	margin: 60px 0px;
-	border: solid 0.1px;
-	width: 100vw;
-	color: #e5e5e5;
-}
-
-.main-content__tool__other__button {
-	display: flex;
-	justify-content: flex-start;
-	gap: 15px;
-	background-color: transparent;
-	font-size: 18px;
-}
-
-.main-content {
-	height: 150vh;
-	width: 100vw;
-	margin-top: 64px;
-	padding: 64px 16px 80px;
-
-	&__store {
-		margin-top: 50px;
-		display: flex;
-		gap: 20px;
-
-		&__image {
-			width: 135;
-			height: 40px;
+		&.first {
+			margin-bottom: 60px;
+		}
+		&.second {
+			margin: 60px 0px;
 		}
 	}
 
-	&__tool {
+	.main-content__tool__other__button {
 		display: flex;
-		flex-direction: column;
-
-		&__help {
-			margin-top: 64px;
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-			font-size: 18px;
-		}
-
-		&__other {
-			margin-top: 64px;
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-			font-size: 18px;
-		}
+		justify-content: flex-start;
+		gap: 15px;
+		background-color: transparent;
+		font-size: 18px;
 	}
 
-	&__regulation {
-		display: flex;
-		flex-direction: column;
+	.main-content {
+		width: 100vw;
+		margin-top: 64px;
+		padding: 64px 16px 80px;
 
-		&__social {
+		&__store {
+			margin-top: 50px;
 			display: flex;
-			align-items: center;
-			gap: 15px;
+			gap: 20px;
 
 			&__image {
-				height: 20px;
-				width: 25px;
-			}
-
-			&__image--facebook {
-				height: 25px;
-				width: 25px;
+				width: 135px;
+				height: 40px;
 			}
 		}
 
-		&__link {
-			margin-top: 40px;
+		&__tool {
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
-			font-size: 14px;
+
+			&__help {
+				margin-top: 64px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				font-size: 18px;
+			}
+
+			&__other {
+				margin-top: 64px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				font-size: 18px;
+			}
+		}
+
+		&__regulation {
+			display: flex;
+			flex-direction: column;
+
+			&__social {
+				display: flex;
+				align-items: center;
+				gap: 15px;
+
+				&__image {
+					height: 20px;
+					width: 25px;
+				}
+
+				&__image--facebook {
+					height: 25px;
+					width: 25px;
+				}
+			}
+
+			&__link {
+				margin-top: 40px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				font-size: 14px;
+			}
 		}
 	}
-}
-
 </style>
