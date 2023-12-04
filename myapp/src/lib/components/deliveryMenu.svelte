@@ -32,9 +32,9 @@
 		background-color: white;
 		height: 100vh;
 		width: 100%;
-        button{
-            background-color: transparent;
-            padding: 20px;
-        }
+		button {
+			background-color: transparent;
+			padding: 20px;
+		}
 	}
 </style>

@@ -9,7 +9,7 @@
     list-style: none;
 }
 
-a{
+a {
     color: black;
 }
 
@@ -31,7 +31,7 @@ a{
     
 }
 
-@mixin flex-columns{
+.flex-columns{
     display: flex;
     flex-direction: column;
 }
