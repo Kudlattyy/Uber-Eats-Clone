@@ -35,6 +35,7 @@
 							<div class="description">W aplikacji wybór jest jeszcze większy</div>
 						</div>
 						<div class="download">
+							<img class="appleLogo" src="/svg/apple-logo.svg" alt="" srcset="">
 							<a class="downloadGooglePlay"> Pobierz aplikacje </a>
 						</div>
 					</div>
@@ -79,7 +80,7 @@
 								place-items: center;
 							}
 							.register {
-								background-color: #333;
+								background-color: #000000;
 								color: #fff;
 								font-size: 18px;
 							}
@@ -135,8 +136,8 @@
 							font-size: 14px;
 							font-weight: 600;
 							.appleLogo {
-								width: 22px;
-								height: 22px;
+								width: 14px;
+								height: 14px;
 							}
 						}
 					}

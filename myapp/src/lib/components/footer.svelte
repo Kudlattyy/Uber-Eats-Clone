@@ -85,24 +85,28 @@
 <main>
 	<div class="main-content">
 		<hr class="main-content__divider first" />
-		<img class="main-content__logo" src="/svg/Logo.svg" />
-		<div class="main-content__store">
-			<img class="main-content__store__image" src="/svg/AppStore.svg" />
-			<img class="main-content__store__image" src="/img/GoogleStore.png" />
-		</div>
-		<div class="main-content__tool">
-			<div class="main-content__tool__help">
-				{#each toolsLink as Index}
-					<a class="main-content__tool__help__link" href={Index.href}>{Index.description}</a>
-				{/each}
-			</div>
-			<div class="main-content__tool__other">
-				{#each otherLink as Index}
-					<a class="main-content__tool__other__link" href={Index.href}>{Index.description}</a>
-				{/each}
-				<button class="main-content__tool__other__button"
-					><img class="main-content__tool__other__button__image" src="/svg/translate.svg" /> Polski
-				</button>
+		<div class="wrapper">
+			<section class="store-section">
+				<img class="main-content__logo" src="/svg/Logo.svg" />
+				<div class="main-content__store">
+					<img class="main-content__store__image" src="/svg/AppStore.svg" />
+					<img class="main-content__store__image" src="/img/GoogleStore.png" />
+				</div>
+			</section>
+			<div class="main-content__tool">
+				<div class="main-content__tool__help">
+					{#each toolsLink as Index}
+						<a class="main-content__tool__help__link" href={Index.href}>{Index.description}</a>
+					{/each}
+				</div>
+				<div class="main-content__tool__other">
+					{#each otherLink as Index}
+						<a class="main-content__tool__other__link" href={Index.href}>{Index.description}</a>
+					{/each}
+					<button class="main-content__tool__other__button"
+						><img class="main-content__tool__other__button__image" src="/svg/translate.svg" /> Polski
+					</button>
+				</div>
 			</div>
 		</div>
 		<hr class="main-content__divider second" />
@@ -213,6 +217,44 @@
 				flex-direction: column;
 				gap: 20px;
 				font-size: 14px;
+			}
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.wrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 60px;
+			padding: 30px;
+		}
+
+		.main-content__tool {
+			flex-direction: row;
+			// margin: auto;
+			gap: 30px;
+		}
+
+		.store-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.main-content__logo {
+				max-width: 134px;
+			}
+		}
+
+
+		.main-content__regulation {
+			display: flex;
+			flex-direction: row;
+
+			.main-content__regulation__link {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: end;
 			}
 		}
 	}

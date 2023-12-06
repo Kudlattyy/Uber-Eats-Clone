@@ -73,12 +73,13 @@
 				W aplikacji na iPhone'a wybór jest jeszcze większy.
 			</div>
 			<div class="download">
-				<button>Pobierz aplikacje</button>
+				<button> <img class="apple-log" src="/svg/apple-logo.svg" alt="" srcset="">
+					Pobierz aplikacje</button>
 			</div>
 		</div>
 		<div class="services">
 			{#each oferty as index}
-				<img class="services-img" src={index.src} />
+				<img class="services-img" src={index.src} alt=""/>
 				<h2>{index.title}</h2>
 				<p>{index.description}</p>
 			{/each}
@@ -86,7 +87,7 @@
 		<div class="map">
 			<div class="title"><h2>Miasta w pobliżu</h2></div>
 			<div class="graphic">
-				<img src="/img/Map.png" alt="" srcset="" />
+				<img class="mapImage" src="/img/Map.png" alt="" srcset="" />
 			</div>
 			<div class="cityNearby">
 				<div class="Cities">
@@ -94,7 +95,7 @@
 						<p class="fontCityNearby">{Index}</p>
 					{/each}
 				</div>
-				<p>Wyświetl wszystkie miasta ponad 500!</p>
+				<p class="p2">Wyświetl wszystkie miasta (ponad 500) </p>
 			</div>
 			<div class="operatingCountries">
 				<h2>Kraje w których działa Uber Eats</h2>
@@ -103,7 +104,7 @@
 						<p class="fontOperantingCity">{Index}</p>
 					{/each}
 				</div>
-				<p>Zobacz wszystkie kraje</p>
+				<p class="p2">Zobacz wszystkie kraje</p>
 			</div>
 		</div>
 	</section>
@@ -111,6 +112,12 @@
 </main>
 
 <style lang="scss">
+
+	.apple-log{
+		width: 12px;
+		height: 14px;
+	}
+
 	h2 {
 		font-size: 22px;
 		font-weight: 700;
@@ -119,7 +126,16 @@
 	p {
 		font-weight: 550;
 		text-decoration: underline;
+		margin-bottom: 25px;
 	}
+
+	.p2{
+		font-weight: 550;
+		text-decoration: underline;
+		margin-top: -25px;
+		margin-bottom: -5px;
+	}
+	
 
 	.main-content {
 		width: 100vw;
@@ -152,14 +168,11 @@
 		.services {
 			display: flex;
 			flex-direction: column;
-
 			gap: 12px;
-			.sevices-img {
-				margin-top: 20px;
-			}
+			
 		}
 		.map {
-			margin-top: 60px;
+			margin-top: 30px;
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
@@ -170,8 +183,7 @@
 				.Cities {
 					display: grid;
 					grid-template-columns: repeat(2, 1fr);
-					grid-template-rows: repeat(1, 2fr);
-					gap: 20px 8px;
+					gap: 0px 8px;
 					.fontCityNearby {
 						font-weight: 500;
 						text-decoration: none;
@@ -186,11 +198,62 @@
 				.Countries {
 					display: grid;
 					grid-template-columns: repeat(2, 1fr);
-					grid-template-rows: repeat(15, 1fr);
 					gap: 24px 8px;
 					.fontOperantingCity {
 						font-weight: 500;
 						text-decoration: none;
+					}
+				}
+			}
+			
+			.mapImage{
+				width: 396px;
+				height: 360px;
+			}
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.main-content {
+			flex-direction: row;
+			.header {
+				display: none;
+			}
+			.services {
+				margin: 60px 0;
+
+				display: grid;
+				grid-template-columns: auto auto auto;
+				img {
+					grid-row: 1;
+					width: 100%;
+					height: 100%;
+				}
+
+				h2 {
+					grid-row: 2;
+				}
+			}
+
+			.map {
+				.graphic {
+					display: flex;
+
+					img {
+						width: 100%;
+						height: 360px;
+					}
+				}
+
+				.cityNearby {
+					.Cities {
+						grid-template-columns: repeat(4, 1fr);
+					}
+				}
+
+				.operatingCountries {
+					.Countries {
+						grid-template-columns: repeat(4, 1fr);
 					}
 				}
 			}

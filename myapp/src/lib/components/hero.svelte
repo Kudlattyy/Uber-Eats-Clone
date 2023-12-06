@@ -59,10 +59,11 @@
 		background-image: var(--background-hero-phone);
 		background-size: cover;
 		.deliveryMenu {
+
 			height: 40%;
 			width: 100%;
 			padding: 0 16px;
-			padding-top	: 11vh;
+			padding-top	: 12vh;
 			  
 			h2 {
 				font-weight: 700;
@@ -129,6 +130,8 @@
 			}
 			h2 {
 				font-size: 56px !important;
+				text-wrap: wrap;
+				max-width: 750px;
 			}
 		}
 	}
